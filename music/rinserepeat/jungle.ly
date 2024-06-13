@@ -1,10 +1,3 @@
-\version "2.24.3"
-
-\header {
-  title = "jungle"
-  composer = "DS"
-}
-
 junglebdsn = \drummode {
   bd4 sn8 bd4 sn8 bd16 sn16 bd8
   bd4 sn8 bd8 sn8 bd8 sn4

@@ -1,7 +1,7 @@
 \version "2.24.3"
 
 \header {
-  title = "rinserepeat"
+  title = "rinserepeatjungle"
   composer = "DS"
 }
 
@@ -61,37 +61,37 @@ melodyTranscribed = \relative c' {
 }
 
 melody = \relative c' {
-  \tuplet 3/1 { g4 c, c }
-  \tuplet 3/1 { gis' c, c }
-  \tuplet 3/1 { g' c, c }
+  \tuplet 3/2 { g8\tenuto c, c }
+  \tuplet 3/2 { gis' c, c }
+  \tuplet 3/2 { g' c, c }
   
-  \tuplet 3/1 { f c c }
-  \tuplet 3/1 { g' c, c }
-  \tuplet 3/1 { f c c }
+  \tuplet 3/2 { f\tenuto c c }
+  \tuplet 3/2 { g' c, c }
+  \tuplet 3/2 { f c c }
   
-  \tuplet 3/1 { e c c }
-  \tuplet 3/1 { f c c }
-  \tuplet 3/1 { e c c }
-  \tuplet 3/1 { f c c }
-  \tuplet 3/1 { g' c, c }
-  \tuplet 3/1 { f c c }
+  \tuplet 3/2 { e\tenuto c c }
+  \tuplet 3/2 { f c c }
+  \tuplet 3/2 { e\tenuto c c }
+  \tuplet 3/2 { f c c }
+  \tuplet 3/2 { g' c, c }
+  \tuplet 3/2 { f c c }
 }
 
 melodyAlt = \relative c' {
-  \tuplet 3/1 { g4 gis c, }
-  \tuplet 3/1 { gis' g c, }
-  \tuplet 3/1 { g' f c }
+  \tuplet 3/2 { g8 gis c, }
+  \tuplet 3/2 { gis' g c, }
+  \tuplet 3/2 { g' f c }
   
-  \tuplet 3/1 { f g c, }
-  \tuplet 3/1 { g' f c }
-  \tuplet 3/1 { f e c }
+  \tuplet 3/2 { f g c, }
+  \tuplet 3/2 { g' f c }
+  \tuplet 3/2 { f e c }
   
-  \tuplet 3/1 { e f c }
-  \tuplet 3/1 { f e c }
-  \tuplet 3/1 { e f c }
-  \tuplet 3/1 { f g c, }
-  \tuplet 3/1 { g' f c }
-  \tuplet 3/1 { f g c, }
+  \tuplet 3/2 { e f c }
+  \tuplet 3/2 { f e c }
+  \tuplet 3/2 { e f c }
+  \tuplet 3/2 { f g c, }
+  \tuplet 3/2 { g' f c }
+  \tuplet 3/2 { f g c, }
 }
 
 melodyfourfour = \relative c {
@@ -154,9 +154,10 @@ rhythmLine = {
 }
 
 melodyLine = {
-  \clef treble
+  \clef "treble_(8)"
   \time 4/4
   \tempo 4=81
+  
   r1 r r r
   \melodyfourfour \melodyfourfourEndOne
   \melodyfourfour \melodyfourfourEndTwo

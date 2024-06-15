@@ -150,6 +150,47 @@ trysomethingTwo = \relative c {
   }
 }
 
+% TODO closer
+trysomethingThree = \relative c {
+  \tuplet 3/2 {
+    %r8 f8\staccato r dis\staccato r fis\staccato
+    %ais8 f'8\staccato ais, dis\staccato ais fis'\staccato
+    %r8 <ais f'\staccato> r <ais dis\staccato> r <ais fis'\staccato>
+    ais8 <ais f'\staccato> ais <ais dis\staccato> ais <ais fis'>
+    r
+    r16 c16\staccato % NOTE or just r8
+    
+    %c16 c16 c8\staccato c[ cis c] r r
+    c16[ c16 c16]~16 c8[ cis c] r r
+  }
+}
+
+% dabass
+trysomethingFour = \relative c, {
+  \tuplet 3/2 {
+    c16 c c c c c
+    c c c c c c
+    c c c
+    
+    c16 c c c c c
+    c c c c c c
+    c c c
+  }
+}
+
+% the elusive rhythm!
+trysomethingFive = \relative c {
+  \tuplet 3/2 {
+    <f ais,>16 r r r <dis ais> r
+    <fis ais,> r r r <dis ais> r
+    <c ais> r r
+    
+    r r r r r r
+    r r r r r r
+    r r r
+  }
+}
+
 trysomethingTwoEnd = \relative c' {
    \tuplet 3/2 {
     c8[ cis c r]
@@ -172,10 +213,10 @@ melodyLine = {
   
   \time 5/4
   %\trysomething
-  \trysomething
-  \trysomething
-  \trysomethingTwo
-  \trysomethingTwo
+  \trysomethingFive
+  \trysomethingFive
+  %\trysomethingTwo
+  %\trysomethingTwo
   \time 4/4
   \melodyTwo
   
@@ -204,7 +245,7 @@ melodyLine = {
 drumbb = {
   %\bdBaz
   %\bdBaz
-  \bdsn_I
+  %\bdsn_I
   %\bdsn_I
   %\bdsn_I
   %\bdsn_I

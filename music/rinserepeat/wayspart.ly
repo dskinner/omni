@@ -13,7 +13,6 @@ bdsn_I = \drummode {
 }
 
 
-
 melodyOne = \relative c' {
   % TODO figure out where whole note c, carries out
   \tuplet 3/2 {
@@ -45,6 +44,49 @@ thrashOne = \relative c' {
     r4.
     c8[ cis ais ]
   }
+}
+
+bdBaz = \drummode {
+  bd4
+  r8.. %r8 r16 r32 
+  bd4
+  r8..
+  bd4
+  r16
+}
+
+thrashBaz = \relative c {
+  c16[ cis c c gis]
+  r16 r16.
+  c16[ cis c c gis]
+  r8 r32
+  c16[ cis c c c]
+}
+
+nextBaz = \relative c' {
+  %c16[cis c] r16 r16
+  %f,4 dis8. fis4 r4
+  % tempo 200?
+  
+  %c16[ c cis c] r4
+  %c8[ c cis c]
+  %f,8.\staccato dis\staccato fis\staccato
+  
+  %
+  %c16 r16.. c16 r16.. c16 r16.
+  \tuplet 8/1 {
+    c2 c c c c c c c
+  }
+  % maybe put on different staff
+  f,16 r8. dis16 r8. fis16
+}
+
+nextBazFill = \relative c' {
+  r8. c16
+}
+
+nextBazEnd = \relative c' {
+  r8. c16
 }
 
 thrashTwo = \relative c' {
@@ -86,6 +128,33 @@ thrashNext = \relative c' {
   }
 }
 
+% basically perfect; 5/4 time
+trysomething = \relative c' {
+  \tuplet 3/2 {
+    c8[ cis c\staccato c\staccato] r4
+    c8[ cis c\staccato c\staccato] r4
+    c8[ cis c]
+  }
+}
+
+trysomethingTwo = \relative c {
+  \tuplet 3/2 {
+    %r8 f8\staccato r dis\staccato r fis\staccato
+    %ais8 f'8\staccato ais, dis\staccato ais fis'\staccato
+    %r8 <ais f'\staccato> r <ais dis\staccato> r <ais fis'\staccato>
+    ais8 <ais f'\staccato> ais <ais dis\staccato> ais <ais fis'>
+    r r r
+    
+    %<ais c>8\staccato c[ cis c] r r
+    c8\staccato c[ cis c] r r
+  }
+}
+
+trysomethingTwoEnd = \relative c' {
+   \tuplet 3/2 {
+    c8[ cis c r]
+  }
+}
 
 
 % everything all 6/4 time followed by chaotic parts and then the
@@ -96,24 +165,49 @@ melodyLine = {
   \clef bass
   \time 4/4
   \tempo 4=162
-  \melodyOne
-  \melodyOne
-  \melodyTwo
-  \melodyTwo
+  %\melodyOne
+  %\melodyOne
+  %\melodyTwo
+  %\melodyTwo
+  
   \time 5/4
-  \thrashOne
-  \thrashOne
-  \thrashOne
-  \thrashOne
-  \thrashNext
-  \thrashNext
+  %\trysomething
+  \trysomething
+  \trysomething
+  \trysomethingTwo
+  \trysomethingTwo
+  \time 4/4
+  \melodyTwo
+  
+  %\time 5/4
+  %\thrashBaz
+  %\thrashOne
+  
+  %\nextBaz
+  %\nextBazFill
+  %\nextBaz
+  %\nextBazFill
+  %\nextBaz
+  %\nextBazFill
+  %\nextBaz
+  
+  %\melodyOne
+  
+  %\thrashOne
+  %\thrashOne
+  %\thrashOne
+  %\thrashOne
+  %\thrashNext
+  %\thrashNext
 }
 
 drumbb = {
+  %\bdBaz
+  %\bdBaz
   \bdsn_I
-  \bdsn_I
-  \bdsn_I
-  \bdsn_I
+  %\bdsn_I
+  %\bdsn_I
+  %\bdsn_I
 }
 
 \score {

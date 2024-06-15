@@ -1,11 +1,12 @@
+\include "jungle.ly"
+\include "wayspart.ly"
+
 \version "2.24.3"
 
 \header {
   title = "rinserepeatjungle"
   composer = "DS"
 }
-
-\include "jungle.ly"
 
 bdsn_I = \drummode {
   bd4 sn8 bd4 sn8 bd8 sn8
@@ -132,6 +133,8 @@ drumbb = {
   \bdquarters
   \bdquarters
   r1
+  
+  r1 r r r r r r r r r r r r r r r
   \junglebdsn
   \junglebdsn
 }
@@ -149,6 +152,7 @@ rhythmLine = {
   
   r
   \tempo 4=162
+  r1 r r r r r r r r r r r r r r r
   \junglerhythm
   \junglerhythmAlt
 }
@@ -169,7 +173,31 @@ melodyLine = {
   % TODO nicer transition
   c2 \tuplet 3/2 {c4 c c }
   
+  
+  
   \tempo 4=162
+  r1 r r r r r r r r r r r r r r r
+  \junglemelodyfourfourAlt
+  \junglemelodyfourfourAlt
+}
+
+wayspartWrapper = {
+  \clef bass
+
+  r1 r r r r r r r r r r r r r r r r r r
+  
+
+  \wayspartOne
+  \wayspartOne
+  \wayspartTwo
+  \wayspartTwo
+  \time 5/4
+  \elusiveIntro
+  \elusiveIntro
+  \elusiveTranscribed
+  \elusiveTranscribed
+  \time 4/4
+  \wayspartTwo
   \junglemelodyfourfourAlt
   \junglemelodyfourfourAlt
 }
@@ -178,6 +206,7 @@ melodyLine = {
   <<
     \new Staff = "melody line" \melodyLine
     \new Staff = "rhythm line" \rhythmLine
+    \new Staff = "wayspart line" \wayspartWrapper
     
     \new DrumStaff \with { instrumentName = "drums" }
     <<

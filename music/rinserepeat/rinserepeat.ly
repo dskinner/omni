@@ -61,7 +61,7 @@ melodyTranscribed = \relative c' {
   f c c
 }
 
-melody = \relative c' {
+melody = \relative c'' {
   \tuplet 3/2 { g8\tenuto c, c }
   \tuplet 3/2 { gis' c, c }
   \tuplet 3/2 { g' c, c }
@@ -78,7 +78,7 @@ melody = \relative c' {
   \tuplet 3/2 { f c c }
 }
 
-melodyAlt = \relative c' {
+melodyAlt = \relative c'' {
   \tuplet 3/2 { g8 gis c, }
   \tuplet 3/2 { gis' g c, }
   \tuplet 3/2 { g' f c }
@@ -95,7 +95,7 @@ melodyAlt = \relative c' {
   \tuplet 3/2 { f g c, }
 }
 
-melodyfourfour = \relative c {
+melodyfourfour = \relative c' {
   c8 g' gis
   c, gis' g
   c, g'
@@ -111,13 +111,13 @@ melodyfourfour = \relative c {
   % NOTE needs ending
 }
 
-melodyfourfourEndOne = \relative c {
+melodyfourfourEndOne = \relative c' {
   c f g
   c, g' f
   c f
 }
 
-melodyfourfourEndTwo = \relative c {
+melodyfourfourEndTwo = \relative c' {
   c16 cis c ais c8
   ais16 c8
   ais16 c cis c8 ais
@@ -171,22 +171,11 @@ melodyLine = {
   \melody
   
   % TODO nicer transition
-  c2 \tuplet 3/2 {c4 c c }
-  
-  
+  %c2 \tuplet 3/2 {c4 c c }
   
   \tempo 4=162
-  r1 r r r r r r r r r r r r r r r
-  \junglemelodyfourfourAlt
-  \junglemelodyfourfourAlt
-}
-
-wayspartWrapper = {
-  \clef bass
-
-  r1 r r r r r r r r r r r r r r r r r r
   
-
+  %%
   \wayspartOne
   \wayspartOne
   \wayspartTwo
@@ -194,8 +183,11 @@ wayspartWrapper = {
   \time 5/4
   \elusiveIntro
   \elusiveIntro
-  \elusiveTranscribed
-  \elusiveTranscribed
+  
+  \elusiveAlt
+  \break
+  \elusiveAlt
+  
   \time 4/4
   \wayspartTwo
   \junglemelodyfourfourAlt
@@ -206,7 +198,6 @@ wayspartWrapper = {
   <<
     \new Staff = "melody line" \melodyLine
     \new Staff = "rhythm line" \rhythmLine
-    \new Staff = "wayspart line" \wayspartWrapper
     
     \new DrumStaff \with { instrumentName = "drums" }
     <<

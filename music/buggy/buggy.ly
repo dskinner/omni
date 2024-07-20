@@ -56,7 +56,7 @@ leadStaff = {
 \score {
   <<
     \new Staff = "lead" \leadStaff
-    \new Staff = "brass" \brassStaff
+    \new Staff \with { instrumentName = "brass" } \brassStaff
     
     \new DrumStaff \with { instrumentName = "drums" }
     <<

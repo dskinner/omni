@@ -16,6 +16,7 @@ home-pull:
 	cp ~/.emacs.d/early-init.el ./
 
 home-push:
+	mkdir -p ~/.emacs.d
 	cp ./init.el ~/.emacs.d/
 	cp ./early-init.el ~/.emacs.d/
 

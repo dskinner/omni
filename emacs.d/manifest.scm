@@ -5,8 +5,7 @@
 ;; See the "Replicating Guix" section in the manual.
 
 (specifications->manifest
-  (list "denemo"
-        "frescobaldi"
+  (list "frescobaldi"
         "lilypond"
         "guile-hoot"
         "glfw"
@@ -16,8 +15,6 @@
         "neovim"
         "ripgrep"
         "emacs-magit"
-        "rust-cargo"
-        "rust"
         "git"
         "emacs-dap-mode"
         "emacs-lsp-mode"

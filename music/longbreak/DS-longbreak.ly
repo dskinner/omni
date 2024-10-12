@@ -16,7 +16,7 @@ drumStaff = {
   \bdbd
 }
 
-lead = \relative c' {
+lead = \relative c'' {
   \tempo 4=80
   dis8 \tuplet 3/2 { d16 d d }
   c8 \tuplet 3/2 { d16 d d }
@@ -44,10 +44,21 @@ leadStaff = {
   \lead
 }
 
+%%%%%%
+
+brass = \relative c {
+  d1 dis f4~4~4 fis c1
+}
+
+brassStaff = {
+  \clef bass
+  \brass
+}
+
 \score {
   <<
     \new Staff = "lead" \leadStaff
-    %\new Staff \with { instrumentName = "brass" } \brassStaff
+    \new Staff \with { instrumentName = "brass" } \brassStaff
     
     \new DrumStaff \with { instrumentName = "drums" }
     <<
